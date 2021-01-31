@@ -252,7 +252,7 @@ const LandingLayout = props => {
                             props.images.leoMoreno.childImageSharp.fluid.src
                         }
                         content={content.leo.content}
-                        bgImageXOffset="0px"
+                        bgImageXOffset="-200px"
                         bgImageYOffset="0px"
                     />
                     {/* <Waypoint onEnter={setNavbarBlur} /> */}

@@ -184,24 +184,12 @@ export class TeamMemberModal extends React.Component {
                     },
                 }}
             >
-                <Box
-                    height="100vh"
-                    sx={{
-                        backgroundImage:
-                            "linear-gradient(to bottom, transparent, transparent, transparent, " +
-                            this.bgColor +
-                            ", " +
-                            this.bgColor +
-                            ", " +
-                            this.bgColor +
-                            ")",
-                    }}
-                >
+                <Box height="100vh" bg={this.bgColor}>
                     <Flex justifyContent="center">
                         <Flex
                             height="100vh"
                             flexDirection="column"
-                            justifyContent="flex-end"
+                            justifyContent="center"
                         >
                             <Box
                                 width={0.8}

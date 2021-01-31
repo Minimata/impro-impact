@@ -34,7 +34,7 @@ def recurse_delete_folder(ftp, path, root):
 
 def copy_files_to_folder(ftp, target_dir_name):
         # Copying files
-        for root, dirs, files in os.walk("public"):
+        for root, dirs, files in os.walk(os.path.join("..", "public")):
             for dir in dirs:
                 dirname = os.path.normpath(os.path.join(root, dir))
                 dirname = dirname.replace('\\', '/')
@@ -61,7 +61,7 @@ def deploy():
     
     config = {}
     try:
-        with open("config.json", "r") as config_file:
+        with open(os.path.join("..", "config.json"), "r") as config_file:
             config = json.load(config_file)
     except Exception:
         print("Could not open and read 'config.json' file. Are you sure you have one in this directory ?")
