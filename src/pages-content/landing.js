@@ -10,7 +10,7 @@ let content = {
     damian: {
         title: "Damian Veiga",
         content:
-            "Damian Veiga est récemment diplômé d’un Master en Science Environnementales et pratique l’improvisation depuis 10 ans entre Genève et Neuchâtel. Il a exercé dans une dizaine de troupes différentes, participé à de nombreux festivals internationaux et joué dans plus de deux cents spectacles. Aujourd’hui, Damian exerce en tant que formateur, arbitre et maître de cérémonie. Pour son travail de Master sur les sciences participatives, il a  agné le premier prix de présentation à la conférence 2019 de l’Euroleague for Life Science, en Suède. Sa formation lui permet de fonder le storytelling sur de nécessaires bases scientifiques.",
+            "Damian Veiga Löffel est diplômé d’un Master en Science Environnementales et pratique l’improvisation théâtrale depuis plus de dix ans entre la Suisse romande et l’étranger (entre autres : la France, la Belgique, l’Espagne, l’Autriche, la Norvège, la Suède, le Danemark, la Pologne et les États-Unis). Il a exercé dans une dizaine de troupes différentes, participé à de nombreux festivals internationaux et joué dans des centaines de spectacles. Aujourd’hui, il exerce en tant que formateur, arbitre et maître de cérémonie dans des structures professionnelles diverses, telles qu’entre autres Impro Suisse et Impro Castel, et a co-fondé Impro Impact. Toujours en ébullition lorsqu’il s’agit de développer des projets créatifs innovants, Damian aime découvrir de nouveaux champs des possibles dans le théâtre d’improvisation. Plus d'infos: www.damianveiga.ch",
     },
     lygia: {
         title: "Lygia Pavitt",
@@ -20,7 +20,7 @@ let content = {
     leo: {
         title: "Léo Moreno",
         content:
-            "Léo Moreno est étudiant en Master de Sciences Sociales à l’UNIL. Il pratique l’improvisation théâtrale depuis bientôt 15 ans. Originaire de Neuchâtel, il y a joué tous les rôles dans des centaines de spectacles de formats divers, a créé plusieurs troupes et concepts de jeu et entraîne aujourd’hui 5 équipes de différents âges et niveaux chaque semaine. Léo est notamment formateur à Impro Suisse et à la Ligue d’Impro Neuchâteloise. Sa formation en Sciences Sociales lui permet d’ancrer un dispositif narratif dans une réflexion sociétale globale.",
+            "Léo Moreno est diplômé d'un Master de Sciences Sociales à l’UNIL et pratique l’improvisation théâtrale depuis bientôt 15 ans. Originaire de Neuchâtel, il y a joué tous les rôles dans des centaines de spectacles de formats divers, a créé plusieurs troupes et concepts de jeu et entraîne aujourd’hui 5 équipes de différents âges et niveaux chaque semaine. Léo est notamment formateur à Impro Suisse et à la Ligue d’Impro Neuchâteloise. Sa formation en Sciences Sociales lui permet d’ancrer un dispositif narratif dans une réflexion sociétale globale.",
     },
 }
 
