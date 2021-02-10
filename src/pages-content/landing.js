@@ -15,7 +15,8 @@ let content = {
     lygia: {
         title: "Lygia Pavitt",
         content:
-            "Lygia Pavitt est étudiante en 2ème année de Master de Psychologie à l’UNIGE. Elle pratique l’improvisation théâtrale depuis 8 ans. Elle est formatrice à la Ligue d’Improvisation Théâtrale de l’UNIGE (aux activités culturelles de l’UNIGE) et à la Fédération d’Improvisation Genevoise depuis trois ans. Sa formation en Psychologie lui permet d’apporter un regard scientifique sur l’impact d’une intervention sur des individus, afin d’optimiser l’aspect pédagogique des projets.",
+            "Lygia Pavitt pratique l’improvisation théâtrale depuis maintenant neuf ans. Elle est formatrice pour adolescent.e.s au sein de la Fédération d’Improvisation Genevoise (FIG) et pour jeunes adultes à l’Université de Genève. Elle a participé à de nombreux festivals dans plusieurs villes de Suisse, ainsi qu’en France et en Belgique. De plus, elle a représenté l’équipe Suisse en 2016, dans le cadre du Festival International des Jeunes Improvisateurs avec la France, le Québec et la Belgique. Elle a évolué au sein de plusieurs troupes, co-fondé Impro Impact et co-écrit deux spectacles semi-improvisés: Helvetia2050, qui sensibilise aux causes environnementales, et Un genre de spectacle, qui traite de problématiques de genre.
+",
     },
     leo: {
         title: "Léo Moreno",
