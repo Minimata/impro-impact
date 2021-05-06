@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 
 import Title from "../components/title"
+import React from "react"
 
 import content from "../pages-content/représentations"
 
@@ -13,6 +14,17 @@ import {
     iconWidthBreakpoints,
     lettersSpacingBreakpoints,
 } from "../helpers/globals"
+
+const singleDate = (date, place) => (
+    <>
+        <Box px={paddingBreakpoints} width={1}>
+            <Text>{date}</Text>
+        </Box>
+        <Box px={paddingBreakpoints} pb="10px" width={1}>
+            <Text>{place}</Text>
+        </Box>
+    </>
+)
 
 const InfoBanner = () => (
     <Flex
@@ -31,12 +43,9 @@ const InfoBanner = () => (
             </Box>
         </Flex>
         <Flex width={halfWidthBreakpoints} flexWrap="wrap">
-            <Box px={paddingBreakpoints} width={1}>
-                <Text>{content.date}</Text>
-            </Box>
-            <Box px={paddingBreakpoints} width={1}>
-                <Text>{content.place}</Text>
-            </Box>
+            {content.representations.map(repres =>
+                singleDate(repres.date, repres.place)
+            )}
         </Flex>
     </Flex>
 )

@@ -7,6 +7,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Title from "../components/title"
 import Link from "../components/custom_link"
 import content from "../pages-content/genre"
+import TeamMember from "../components/team_member"
+import InfoBanner from "../components/info_banner"
+import SponsorBanner from "../components/sponsor_banner"
 
 import { Hero, ScrollDownIndicator } from "react-landing-page"
 import { Parallax } from "react-scroll-parallax"
@@ -30,10 +33,36 @@ export const defaultImage = graphql`
 const GenreLayout = props => {
     const data = useStaticQuery(graphql`
         query {
-            landingImage: file(relativePath: { eq: "genre/genre.jpg" }) {
+            landingImage: file(
+                relativePath: { eq: "genre/backgrounds/genre.jpg" }
+            ) {
                 ...defaultImage
             }
-            middleImage: file(relativePath: { eq: "genre/genre_poing.jpg" }) {
+            middleImage: file(
+                relativePath: { eq: "genre/backgrounds/genre_poing.jpg" }
+            ) {
+                ...defaultImage
+            }
+
+            lygiaPavitt: file(
+                relativePath: { eq: "genre/people/lygiaPavitt.JPG" }
+            ) {
+                ...defaultImage
+            }
+            aureliaPlaton: file(
+                relativePath: { eq: "genre/people/aureliaPlaton.JPG" }
+            ) {
+                ...defaultImage
+            }
+
+            logoUnige: file(
+                relativePath: { eq: "helvetia2050/sponsors/unige_logo.png" }
+            ) {
+                ...defaultImage
+            }
+            logoAcademie: file(
+                relativePath: { eq: "helvetia2050/sponsors/academie_logo.png" }
+            ) {
                 ...defaultImage
             }
         }
@@ -115,9 +144,11 @@ const GenreLayout = props => {
                         fontSize: [10],
                     }}
                 >
-                    This page has been designed using resources from
-                    <Link href="https://www.freepik.com/" inline>
-                        Freepik.com
+                    <Link
+                        href="https://www.freepik.com/vectors/school"
+                        target="_blank"
+                    >
+                        School vector created by pch.vector - www.freepik.com
                     </Link>
                 </Text>
                 <ScrollDownIndicator
@@ -173,7 +204,7 @@ const GenreLayout = props => {
                         letterSpacing: lettersSpacingBreakpoints,
                     }}
                 >
-                    {content.hero1.title}
+                    {content.hero_solution.title}
                 </Title>
             </Hero>
 
@@ -214,6 +245,48 @@ const GenreLayout = props => {
 
             <Waypoint onEnter={setNavbarOpaque} />
 
+            {/* <Hero
+                bg="rgba(255, 255, 255, 0.5)"
+                backgroundImage={data.middleImage.childImageSharp.fluid.src}
+            >
+                <Title
+                    sx={{
+                        textAlign: "center",
+                        fontSize: [24, 30, 40, 56, 64, 80],
+                        letterSpacing: lettersSpacingBreakpoints,
+                    }}
+                >
+                    {content.hero_orga.title}
+                </Title>
+            </Hero>
+
+            <Waypoint onEnter={setNavbarTransparent} />
+
+            <Box>
+                <Hero sx={{ bg: "background" }}>
+                    <Flex alignItems="center" flexWrap="wrap" width={1}>
+                        <TeamMember
+                            name={content.organisers.lygiaPavitt.title}
+                            avatar={data.lygiaPavitt.childImageSharp.fluid.src}
+                            content={content.organisers.lygiaPavitt.content}
+                            numberOfPeople={2}
+                            bgImageXOffset="-300px"
+                        />
+                        <TeamMember
+                            name={content.organisers.aureliaPlaton.title}
+                            avatar={
+                                data.aureliaPlaton.childImageSharp.fluid.src
+                            }
+                            content={content.organisers.aureliaPlaton.content}
+                            numberOfPeople={2}
+                            bgImageXOffset="-400px"
+                        />
+                    </Flex>
+                </Hero>
+            </Box> */}
+            {/* 
+            <Waypoint onEnter={setNavbarTransparent} />
+
             <Hero
                 bg="rgba(255, 255, 255, 0.5)"
                 backgroundImage={data.landingImage.childImageSharp.fluid.src}
@@ -225,7 +298,7 @@ const GenreLayout = props => {
                         letterSpacing: lettersSpacingBreakpoints,
                     }}
                 >
-                    <Parallax x={[0, 0]}>{content.hero2.title}</Parallax>
+                    <Parallax x={[0, 0]}>{content.hero_atelier.title}</Parallax>
                 </Title>
 
                 <Flex
@@ -241,18 +314,23 @@ const GenreLayout = props => {
                                 textAlign: "center",
                             }}
                         >
-                            {content.hero2.subtitle}
+                            {content.hero_atelier.subtitle}
                         </Box>
                     </Parallax>
                     <Parallax x={[0, 0]}>
                         <Box m={paddingBreakpoints}>
-                            {content.hero2.content}
+                            {content.hero_atelier.content}
                         </Box>
                     </Parallax>
                 </Flex>
             </Hero>
 
-            <Waypoint onEnter={setNavbarTransparent} />
+            <Waypoint onEnter={setNavbarTransparent} /> */}
+            {/* 
+            <SponsorBanner
+                sponsorLogo1={data.logoUnige}
+                sponsorLogo2={data.logoAcademie}
+            /> */}
         </>
     )
 }

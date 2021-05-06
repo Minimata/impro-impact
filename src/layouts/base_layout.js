@@ -32,7 +32,7 @@ const BaseLayout = props => {
     const images = useStaticQuery(graphql`
         query {
             landingImage: file(
-                relativePath: { eq: "helvetia2050/backgrounds/401.jpg" }
+                relativePath: { eq: "trashquiz/backgrounds/landing_water2.jpg" }
             ) {
                 ...defaultImage
             }

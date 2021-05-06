@@ -144,6 +144,23 @@ class Navbar extends React.Component {
                     onStateChange={state => this.handleStateChange(state)}
                 >
                     <Box>
+                        <Link
+                            to="/trashquiz/"
+                            variant="nav"
+                            width={iconWidthBreakpoints}
+                        >
+                            <Flex
+                                alignItems="center"
+                                justifyContent="spaceEvenly"
+                                fontSize={navbarTitleFontSizeBreakpoints}
+                            >
+                                <Box mx="auto"></Box>
+                                Trash Quiz
+                                <Box mx="auto"></Box>
+                            </Flex>
+                        </Link>
+                    </Box>
+                    <Box>
                         <Link to="/helvetia2050/" variant="nav">
                             <Flex
                                 alignItems="center"

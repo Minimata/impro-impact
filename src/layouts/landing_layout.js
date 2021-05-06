@@ -165,8 +165,11 @@ const LandingLayout = props => {
                                     Grâce à l’impro, votre message devient
                                     interactif, ludique et mémorable ! Nous
                                     proposons une gamme de spectacle sur les
-                                    thématiques suivantes : la crise écologique
-                                    («
+                                    thématiques suivantes : le littering («
+                                    <Link to="/trashquiz/" inline>
+                                        Trash Quiz
+                                    </Link>
+                                    »), la crise écologique («
                                     <Link to="/helvetia2050/" inline>
                                         Helvetia2050
                                     </Link>

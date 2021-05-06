@@ -8,6 +8,7 @@ import Title from "../components/title"
 import content from "../pages-content/helvetia"
 import Link from "../components/custom_link"
 import TeamMember from "../components/team_member"
+import VideoWrapper from "../components/video_wrapper"
 import InfoBanner from "../components/info_banner"
 import SponsorBanner from "../components/sponsor_banner"
 
@@ -38,12 +39,17 @@ const HelvetiaLayout = props => {
     const data = useStaticQuery(graphql`
         query {
             landingImage: file(
-                relativePath: { eq: "helvetia2050/backgrounds/26.jpg" }
+                relativePath: { eq: "helvetia2050/backgrounds/401.jpg" }
             ) {
                 ...defaultImage
             }
             middleImage: file(
                 relativePath: { eq: "helvetia2050/backgrounds/9.jpg" }
+            ) {
+                ...defaultImage
+            }
+            mediaImage: file(
+                relativePath: { eq: "helvetia2050/backgrounds/26.jpg" }
             ) {
                 ...defaultImage
             }
@@ -287,6 +293,52 @@ const HelvetiaLayout = props => {
         </Parallax>
     )
 
+    const couleur3Video = (
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/J40hbrJMg_0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+        ></iframe>
+    )
+    const couleur3VideoPhone = (
+        <iframe
+            width="375"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/J40hbrJMg_0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+        ></iframe>
+    )
+
+    const jingleVideo = (
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/iRjEHu4Raq4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+        ></iframe>
+    )
+    const jingleVideoPhone = (
+        <iframe
+            width="375"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/iRjEHu4Raq4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+        ></iframe>
+    )
+
     const wordCloudData = [
         { text: "'La grande Classe'", value: 1000 },
         { text: "'L'impro avec le Cenovis était super'", value: 200 },
@@ -330,7 +382,6 @@ const HelvetiaLayout = props => {
             >
                 <Title
                     sx={{
-                        marginTop: "-280px",
                         textAlign: "center",
                         fontSize: [24, 30, 40, 56, 64, 80],
                         letterSpacing: lettersSpacingBreakpoints,
@@ -383,7 +434,7 @@ const HelvetiaLayout = props => {
 
             <Waypoint onEnter={setNavbarTransparent} />
 
-            <InfoBanner></InfoBanner>
+            {/* <InfoBanner></InfoBanner> */}
 
             <Box ref={contentRef}>
                 <Hero id="content">
@@ -486,13 +537,47 @@ const HelvetiaLayout = props => {
                 >
                     Vos solutions
                 </Title>
-            </Hero> */}
+            </Hero>
 
-            {/* <Box ref={solutionsRef}>
+            <Box ref={solutionsRef}>
                 <Hero id="solutions">
                     <ImageGallery items={images} />
                 </Hero>
-            </Box> */}
+            </Box>
+
+            <Waypoint onEnter={setNavbarOpaque} /> */}
+
+            <Hero
+                bg="rgba(255, 255, 255, 0.5)"
+                backgroundImage={data.mediaImage.childImageSharp.fluid.src}
+            >
+                <Title
+                    sx={{
+                        textAlign: "center",
+                        fontSize: [24, 30, 40, 56, 64, 80],
+                        letterSpacing: lettersSpacingBreakpoints,
+                    }}
+                >
+                    Média
+                </Title>
+            </Hero>
+
+            <Box ref={solutionsRef}>
+                <Hero id="media">
+                    <Flex alignItems="center" flexWrap="wrap" width={1}>
+                        <VideoWrapper
+                            video={couleur3Video}
+                            videoPhone={couleur3VideoPhone}
+                            numberOfVideos={2}
+                        />
+                        <VideoWrapper
+                            video={jingleVideo}
+                            videoPhone={jingleVideoPhone}
+                            numberOfVideos={2}
+                        />
+                    </Flex>
+                </Hero>
+            </Box>
 
             <Hero
                 bg="rgba(255, 255, 255, 0.5)"
@@ -610,9 +695,9 @@ const HelvetiaLayout = props => {
                 <Hero id="photos">
                     <ImageGallery items={images} />
                 </Hero>
-            </Box>
+            </Box> */}
 
-            <Hero
+            {/* <Hero
                 bg="rgba(255, 255, 255, 0.6)"
                 backgroundImage={data.landingImage.childImageSharp.fluid.src}
             >

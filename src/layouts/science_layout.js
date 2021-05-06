@@ -110,20 +110,6 @@ const ScienceLayout = props => {
                     {content.landing.title}
                 </Title>
                 <Box my="auto"></Box>
-                <Text
-                    my="20px"
-                    mr="20px"
-                    ml="auto"
-                    sx={{
-                        textAlign: "center",
-                        fontSize: [10],
-                    }}
-                >
-                    This page has been designed using resources from
-                    <Link href="https://www.freepik.com/" inline>
-                        Freepik.com
-                    </Link>
-                </Text>
                 <ScrollDownIndicator
                     onClick={() => {
                         scrollToElementArray[0](contentRef)
