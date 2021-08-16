@@ -15,8 +15,7 @@ let content = {
     lygia: {
         title: "Lygia Pavitt",
         content:
-            "Lygia Pavitt pratique l’improvisation théâtrale depuis maintenant neuf ans. Elle est formatrice pour adolescent.e.s au sein de la Fédération d’Improvisation Genevoise (FIG) et pour jeunes adultes à l’Université de Genève. Elle a participé à de nombreux festivals dans plusieurs villes de Suisse, ainsi qu’en France et en Belgique. De plus, elle a représenté l’équipe Suisse en 2016, dans le cadre du Festival International des Jeunes Improvisateurs avec la France, le Québec et la Belgique. Elle a évolué au sein de plusieurs troupes, co-fondé Impro Impact et co-écrit deux spectacles semi-improvisés: Helvetia2050, qui sensibilise aux causes environnementales, et Un genre de spectacle, qui traite de problématiques de genre.
-",
+            "Lygia Pavitt pratique l’improvisation théâtrale depuis maintenant neuf ans. Elle est formatrice pour adolescent.e.s au sein de la Fédération d’Improvisation Genevoise (FIG) et pour jeunes adultes à l’Université de Genève. Elle a participé à de nombreux festivals dans plusieurs villes de Suisse, ainsi qu’en France et en Belgique. De plus, elle a représenté l’équipe Suisse en 2016, dans le cadre du Festival International des Jeunes Improvisateurs avec la France, le Québec et la Belgique. Elle a évolué au sein de plusieurs troupes, co-fondé Impro Impact et co-écrit deux spectacles semi-improvisés: Helvetia2050, qui sensibilise aux causes environnementales, et Un genre de spectacle, qui traite de problématiques de genre.",
     },
     leo: {
         title: "Léo Moreno",

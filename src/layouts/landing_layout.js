@@ -6,6 +6,7 @@ import Title from "../components/title"
 import TeamMember from "../components/team_member"
 import Link from "../components/custom_link"
 import InfoBanner from "../components/info_banner"
+import VideoWrapper from "../components/video_wrapper"
 
 import content from "../pages-content/landing"
 
@@ -35,6 +36,29 @@ const LandingLayout = props => {
     const setNavbarOpaque = () => {
         props.navbar.current.setOpaque()
     }
+
+    const trashquizvideo = (
+        <iframe
+            width="1280"
+            height="720"
+            src="https://www.youtube-nocookie.com/embed/Rk0AiQmJAdM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+        ></iframe>
+    )
+    const trashquizvideoPhone = (
+        <iframe
+            width="300"
+            height="169"
+            src="https://www.youtube-nocookie.com/embed/Rk0AiQmJAdM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+        ></iframe>
+    )
 
     const [colorMode, setColorMode] = useColorMode()
     setColorMode("default")
@@ -112,7 +136,7 @@ const LandingLayout = props => {
                             m={paddingBreakpoints}
                         >
                             <RebassLink
-                                href="https://www.instagram.com/helvetia2050/"
+                                href="https://www.instagram.com/impro_impact/"
                                 target="_blank"
                             >
                                 <Img
@@ -132,6 +156,20 @@ const LandingLayout = props => {
             </Hero>
 
             <Waypoint onEnter={setNavbarTransparent} />
+
+            <Box>
+                <Hero id="media">
+                    <Flex alignItems="center" flexWrap="wrap" width={1}>
+                        <VideoWrapper
+                            video={trashquizvideo}
+                            videoPhone={trashquizvideoPhone}
+                            numberOfVideos={1}
+                        />
+                    </Flex>
+                </Hero>
+            </Box>
+
+            <Waypoint onEnter={setNavbarOpaque} />
 
             <InfoBanner></InfoBanner>
 

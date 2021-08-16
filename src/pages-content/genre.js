@@ -19,15 +19,10 @@ let content = {
         title: "Porteuses du projet",
     },
     organisers: {
-        lygiaPavitt: {
-            title: "Lygia Pavitt",
+        aurelygia: {
+            title: "Lygia et Aurélia",
             content:
-                "Lygia Pavitt (co-directrice) est étudiante en dernière année de Master de Psychologie à l’UNIGE. Elle pratique l’improvisation théâtrale depuis huit ans à Genève. Elle est formatrice à la Ligue d’Improvisation Théâtrale de l’UNIGE (aux activités culturelles de l’UNIGE) et à la Fédération d’Improvisation Genevoise depuis trois ans. Sa formation en Psychologie lui permet d’apporter un regard scientifique sur l’impact d’une intervention sur des individus, afin d’optimiser l’aspect pédagogique du projet ainsi que mesurer l'impact du spectacle.",
-        },
-        aureliaPlaton: {
-            title: "Aurélia Platon",
-            content:
-                "Aurélia a commencé l’improvisation théâtrale et le théâtre il y a quatre ans. Évoluant actuellement au sein de deux troupes (les Little Juice et la Thorel), elle a aussi joué dans plusieurs projets théâtraux (La Plume et le Plomb, Ambitions - Next Generation, Les filles de la frange). Elle est également formatrice d’impro pour les enfants au sein d'Impro Suisse. En parallèle, Aurélia est enseignante à l’école primaire et fait partie d'une des commissions de la Chaire UNESCO 'Pratique de la philosophie avec les enfants', ainsi que du comité de proPhilo, une association genevoise qui oeuvre pour le développement de la pratique du dialogue philosophique dans la cité.",
+                "Lygia Pavitt (à gauche) est fraîchement diplômée d’un Master de Psychologie sociale à l’UNIGE, qu’elle a conclu avec un mémoire sur les effets néfastes du sexisme bienveillant sur l’aspiration au leadership chez les femmes. Improvisatrice depuis de nombreuses années, elle forme depuis 4 ans des comédien·ne·s aux AC de l'UNIGE et à la F!G. Aurélia Platon (à droite) est enseignante au primaire, spécialiste en droits de l’enfant, animatrice de dialogues philosophiques et comédienne. Elle participe depuis 2017 à divers projets théâtraux, portant à chaque fois, au travers de ces derniers, des questionnements sur l’identité féminine.",
         },
     },
     hero_atelier: {

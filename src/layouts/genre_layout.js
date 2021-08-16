@@ -10,6 +10,7 @@ import content from "../pages-content/genre"
 import TeamMember from "../components/team_member"
 import InfoBanner from "../components/info_banner"
 import SponsorBanner from "../components/sponsor_banner"
+import ImageParagraph from "../components/image_paragraph"
 
 import { Hero, ScrollDownIndicator } from "react-landing-page"
 import { Parallax } from "react-scroll-parallax"
@@ -39,29 +40,34 @@ const GenreLayout = props => {
                 ...defaultImage
             }
             middleImage: file(
-                relativePath: { eq: "genre/backgrounds/genre_poing.jpg" }
+                relativePath: { eq: "genre/backgrounds/genre2.jpg" }
             ) {
                 ...defaultImage
             }
 
-            lygiaPavitt: file(
-                relativePath: { eq: "genre/people/lygiaPavitt.JPG" }
-            ) {
-                ...defaultImage
-            }
-            aureliaPlaton: file(
-                relativePath: { eq: "genre/people/aureliaPlaton.JPG" }
+            aurelygia: file(
+                relativePath: { eq: "genre/people/aurelygia.jpg" }
             ) {
                 ...defaultImage
             }
 
-            logoUnige: file(
-                relativePath: { eq: "helvetia2050/sponsors/unige_logo.png" }
+            logoClash: file(
+                relativePath: { eq: "genre/sponsors/clash_logo.png" }
             ) {
                 ...defaultImage
             }
-            logoAcademie: file(
-                relativePath: { eq: "helvetia2050/sponsors/academie_logo.png" }
+            logoMedecine: file(
+                relativePath: { eq: "genre/sponsors/medecine.png" }
+            ) {
+                ...defaultImage
+            }
+            logoEmilie: file(
+                relativePath: { eq: "genre/sponsors/emilie_gourd_logo.png" }
+            ) {
+                ...defaultImage
+            }
+            logoGeneve: file(
+                relativePath: { eq: "genre/sponsors/geneve_logo.png" }
             ) {
                 ...defaultImage
             }
@@ -197,6 +203,7 @@ const GenreLayout = props => {
                 bg="rgba(255, 255, 255, 0.5)"
                 backgroundImage={data.middleImage.childImageSharp.fluid.src}
             >
+                <Box my="auto"></Box>
                 <Title
                     sx={{
                         textAlign: "center",
@@ -206,6 +213,21 @@ const GenreLayout = props => {
                 >
                     {content.hero_solution.title}
                 </Title>
+                <Box my="auto"></Box>
+                <Text
+                    my="20px"
+                    mr="20px"
+                    ml="auto"
+                    sx={{
+                        textAlign: "center",
+                        fontSize: [10],
+                    }}
+                >
+                    <Link href="https://www.freepik.com" target="_blank">
+                        This cover has been designed using resources from
+                        Freepik.com
+                    </Link>
+                </Text>
             </Hero>
 
             <Waypoint onEnter={setNavbarTransparent} />
@@ -245,10 +267,11 @@ const GenreLayout = props => {
 
             <Waypoint onEnter={setNavbarOpaque} />
 
-            {/* <Hero
+            <Hero
                 bg="rgba(255, 255, 255, 0.5)"
                 backgroundImage={data.middleImage.childImageSharp.fluid.src}
             >
+                <Box my="auto"></Box>
                 <Title
                     sx={{
                         textAlign: "center",
@@ -258,35 +281,108 @@ const GenreLayout = props => {
                 >
                     {content.hero_orga.title}
                 </Title>
+                <Box my="auto"></Box>
+                <Text
+                    my="20px"
+                    mr="20px"
+                    ml="auto"
+                    sx={{
+                        textAlign: "center",
+                        fontSize: [10],
+                    }}
+                >
+                    <Link href="https://www.freepik.com" target="_blank">
+                        This cover has been designed using resources from
+                        Freepik.com
+                    </Link>
+                </Text>
             </Hero>
 
             <Waypoint onEnter={setNavbarTransparent} />
 
             <Box>
-                <Hero sx={{ bg: "background" }}>
+                <ImageParagraph
+                    image={data.aurelygia.childImageSharp.fluid.src}
+                >
+                    <Box>{content.organisers.aurelygia.content}</Box>
+                    <Box mt="20px">
+                        Retrouvez plus d'informations
+                        <Link to="/lygiaAurelia" inline>
+                            ici.
+                        </Link>
+                    </Box>
+                    <Box my="auto"></Box>
+                    <Text
+                        my="60px"
+                        mr="20px"
+                        ml="auto"
+                        sx={{
+                            fontSize: [10],
+                        }}
+                    >
+                        Crédit photo: Judith Marchal
+                    </Text>
+                </ImageParagraph>
+                {/* <Hero sx={{ bg: "background" }}>
                     <Flex alignItems="center" flexWrap="wrap" width={1}>
                         <TeamMember
-                            name={content.organisers.lygiaPavitt.title}
-                            avatar={data.lygiaPavitt.childImageSharp.fluid.src}
-                            content={content.organisers.lygiaPavitt.content}
-                            numberOfPeople={2}
+                            name={content.organisers.aurelygia.title}
+                            avatar={data.aurelygia.childImageSharp.fluid.src}
+                            content={content.organisers.aurelygia.content}
+                            numberOfPeople={1}
                             bgImageXOffset="-300px"
                         />
-                        <TeamMember
-                            name={content.organisers.aureliaPlaton.title}
-                            avatar={
-                                data.aureliaPlaton.childImageSharp.fluid.src
-                            }
-                            content={content.organisers.aureliaPlaton.content}
-                            numberOfPeople={2}
-                            bgImageXOffset="-400px"
-                        />
                     </Flex>
-                </Hero>
-            </Box> */}
-            {/* 
-            <Waypoint onEnter={setNavbarTransparent} />
+                    {/* <Flex alignItems="center" flexWrap="wrap" width={1}>
+                        <Flex alignItems="center" width={halfWidthBreakpoints}>
+                            <Box
+                                p={paddingBreakpoints}
+                                mx="auto"
+                                width={1}
+                                sx={{ textAlign: "justify" }}
+                            >
+                                <Parallax y={[-30, 30]}>
+                                    {content.organisers.aurelygia.content}
+                                </Parallax>
+                            </Box>
+                        </Flex>
+                        <Flex alignItems="center" width={halfWidthBreakpoints}>
+                            <Box
+                                p={paddingBreakpoints}
+                                mx="auto"
+                                my={stackedParallaxedYMargin}
+                                sx={{
+                                    fontSize: contentTitleFontSizeBreakpoints,
+                                }}
+                            >
+                                <Parallax y={[30, -30]}>
+                                    <Title width={1}>
+                                        {content.paragraph2.title}
+                                    </Title>
+                                </Parallax>
+                            </Box>
+                        </Flex>
+                    </Flex>
+                </Hero> */}
+            </Box>
 
+            <Waypoint onEnter={setNavbarOpaque} />
+
+            <SponsorBanner
+                text="Un genre de spectacle en école primaire recoit le soutien de"
+                sponsorLogo1={data.logoEmilie}
+                sponsorLogo2={data.logoGeneve}
+            />
+            <SponsorBanner
+                text="Un genre de spectacle à la faculté de médecine est offert par"
+                sponsorText="Le groupe de travail contre le harcèlement affilié à l'Unige"
+                sponsorLogo1={data.logoMedecine}
+                sponsorLogo2={data.logoClash}
+            />
+
+            <Waypoint onEnter={setNavbarOpaque} />
+
+            {/* 
             <Hero
                 bg="rgba(255, 255, 255, 0.5)"
                 backgroundImage={data.landingImage.childImageSharp.fluid.src}

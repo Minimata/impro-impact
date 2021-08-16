@@ -2,20 +2,12 @@ let content = {
     spectacle: "Trash Quiz",
     representations: [
         {
-            date: "4 juin 2021",
-            place: "Plage des Eaux-Vives dès 15h",
+            date: "27 août 2021",
+            place: "Plage des Eaux-Vives dès 16h",
         },
         {
-            date: "5 juin 2021",
-            place: "Pointe de la Jonction dès 15h",
-        },
-        {
-            date: "10 juillet 2021",
-            place: "Plage des Eaux-Vives dès 15h",
-        },
-        {
-            date: "11 juillet 2021",
-            place: "Pointe de la Jonction dès 15h",
+            date: "11 septembre 2021",
+            place: "Plage des Eaux-Vives dès 16h",
         },
     ],
 }

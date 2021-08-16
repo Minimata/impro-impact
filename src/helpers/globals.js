@@ -1,3 +1,5 @@
+import { graphql } from "gatsby"
+
 export const siteTitle = "Impro Impact"
 
 export const halfWidthBreakpoints = [1, 1, 1 / 2, 1 / 2, 1 / 2, 1 / 2]
@@ -24,3 +26,13 @@ export const contentTitleFontSizeBreakpoints = [10, 14, 14, 16, 18, 20]
 export const navbarTitleFontSizeBreakpoints = [15, 22, 30, 37, 44, 50]
 
 export const screenWidthItemsPaddingBreakpoints = [10, 20, 40, 60, 80, 100]
+
+export const defaultImage = graphql`
+    fragment defaultImage on File {
+        childImageSharp {
+            fluid(maxWidth: 4096) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+`

@@ -8,9 +8,20 @@ import Title from "../components/title"
 import content from "../pages-content/helvetia"
 import Link from "../components/custom_link"
 import TeamMember from "../components/team_member"
+import ImageLinkWrapper from "../components/image_link_wrapper"
 import VideoWrapper from "../components/video_wrapper"
 import InfoBanner from "../components/info_banner"
 import SponsorBanner from "../components/sponsor_banner"
+import ImageParagraph from "../components/image_paragraph"
+
+import {
+    halfWidthBreakpoints,
+    stackedParallaxedYMargin,
+    paddingBreakpoints,
+    iconWidthBreakpoints,
+    lettersSpacingBreakpoints,
+    contentTitleFontSizeBreakpoints,
+} from "../helpers/globals"
 
 import { Hero, ScrollDownIndicator } from "react-landing-page"
 import { Parallax } from "react-scroll-parallax"
@@ -22,8 +33,6 @@ import { Waypoint } from "react-waypoint"
 import WordCloud from "react-d3-cloud"
 
 import ImageGallery from "react-image-gallery"
-
-import { contentTitleFontSizeBreakpoints } from "../helpers/globals"
 
 export const defaultImage = graphql`
     fragment defaultImage on File {
@@ -50,6 +59,16 @@ const HelvetiaLayout = props => {
             }
             mediaImage: file(
                 relativePath: { eq: "helvetia2050/backgrounds/26.jpg" }
+            ) {
+                ...defaultImage
+            }
+            pressImage: file(
+                relativePath: { eq: "helvetia2050/backgrounds/402.jpg" }
+            ) {
+                ...defaultImage
+            }
+            collabImage: file(
+                relativePath: { eq: "helvetia2050/backgrounds/408.jpg" }
             ) {
                 ...defaultImage
             }
@@ -124,27 +143,23 @@ const HelvetiaLayout = props => {
             ) {
                 ...defaultImage
             }
+            lisaMoussaoui: file(
+                relativePath: { eq: "helvetia2050/people/lisaMoussaoui.JPG" }
+            ) {
+                ...defaultImage
+            }
+
+            TDG: file(relativePath: { eq: "helvetia2050/press/TDG.jpg" }) {
+                ...defaultImage
+            }
+            epic: file(relativePath: { eq: "helvetia2050/press/Epic.png" }) {
+                ...defaultImage
+            }
+            GHI: file(relativePath: { eq: "helvetia2050/press/GHI.png" }) {
+                ...defaultImage
+            }
         }
     `)
-    const halfWidthBreakpoints = [1, 1, 1 / 2, 1 / 2, 1 / 2, 1 / 2]
-    const stackedParallaxedYMargin = [5, 5, 2, 2, 2, 2]
-    const paddingBreakpoints = [2, 2, 3, 4, 4, 5]
-    const iconWidthBreakpoints = [
-        "2em",
-        "2.1em",
-        "2.2em",
-        "2.3em",
-        "2.4em",
-        "2.5em",
-    ]
-    const lettersSpacingBreakpoints = [
-        "0.18em",
-        "0.19em",
-        "0.20em",
-        "0.21em",
-        "0.22em",
-        "0.23em",
-    ]
 
     const setNavbarTransparent = () => {
         props.navbar.current.setTransparent()
@@ -306,8 +321,8 @@ const HelvetiaLayout = props => {
     )
     const couleur3VideoPhone = (
         <iframe
-            width="375"
-            height="315"
+            width="300"
+            height="169"
             src="https://www.youtube-nocookie.com/embed/J40hbrJMg_0"
             title="YouTube video player"
             frameborder="0"
@@ -329,8 +344,8 @@ const HelvetiaLayout = props => {
     )
     const jingleVideoPhone = (
         <iframe
-            width="375"
-            height="315"
+            width="300"
+            height="169"
             src="https://www.youtube-nocookie.com/embed/iRjEHu4Raq4"
             title="YouTube video player"
             frameborder="0"
@@ -561,8 +576,9 @@ const HelvetiaLayout = props => {
                     Média
                 </Title>
             </Hero>
+            <Waypoint onEnter={setNavbarTransparent} />
 
-            <Box ref={solutionsRef}>
+            <Box>
                 <Hero id="media">
                     <Flex alignItems="center" flexWrap="wrap" width={1}>
                         <VideoWrapper
@@ -578,6 +594,78 @@ const HelvetiaLayout = props => {
                     </Flex>
                 </Hero>
             </Box>
+            <Waypoint onEnter={setNavbarOpaque} />
+
+            <Hero
+                bg="rgba(255, 255, 255, 0.5)"
+                backgroundImage={data.pressImage.childImageSharp.fluid.src}
+            >
+                <Title
+                    sx={{
+                        textAlign: "center",
+                        fontSize: [24, 30, 40, 56, 64, 80],
+                        letterSpacing: lettersSpacingBreakpoints,
+                    }}
+                >
+                    Presse
+                </Title>
+            </Hero>
+            <Waypoint onEnter={setNavbarTransparent} />
+
+            <Box>
+                <Hero>
+                    <Flex alignItems="center" flexWrap="wrap" width={1}>
+                        <ImageLinkWrapper
+                            name="Tribune de Genève"
+                            image={data.TDG.childImageSharp.fluid.src}
+                            link="https://www.tdg.ch/helvetia-2050-retour-vers-le-futur-de-la-suisse-182360330487"
+                            numberOfLinks={3}
+                            bgImageYOffset="-70px"
+                        />
+                        <ImageLinkWrapper
+                            name="Epic Magazine"
+                            image={data.epic.childImageSharp.fluid.src}
+                            link="https://epic-magazine.ch/helvetia-2050-la-suisse-dapres-avec-impro-impact/"
+                            numberOfLinks={3}
+                            bgImageYOffset="-190px"
+                        />
+                        <ImageLinkWrapper
+                            name="GHI"
+                            image={data.GHI.childImageSharp.fluid.src}
+                            link="https://www.ghi.ch/sortir/loisirs/un-spectacle-participatif-pour-eveiller-les-consciences"
+                            numberOfLinks={3}
+                            bgImageYOffset="170px"
+                        />
+                    </Flex>
+                </Hero>
+            </Box>
+            <Waypoint onEnter={setNavbarOpaque} />
+
+            <Hero
+                bg="rgba(255, 255, 255, 0.5)"
+                backgroundImage={data.collabImage.childImageSharp.fluid.src}
+            >
+                <Title
+                    sx={{
+                        textAlign: "center",
+                        fontSize: [24, 30, 40, 56, 64, 80],
+                        letterSpacing: lettersSpacingBreakpoints,
+                    }}
+                >
+                    Collaboration
+                </Title>
+            </Hero>
+            <Waypoint onEnter={setNavbarTransparent} />
+
+            <Box>
+                <ImageParagraph
+                    image={data.lisaMoussaoui.childImageSharp.fluid.src}
+                >
+                    {content.people.lisaMoussaoui.content}
+                </ImageParagraph>
+            </Box>
+
+            <Waypoint onEnter={setNavbarOpaque} />
 
             <Hero
                 bg="rgba(255, 255, 255, 0.5)"
@@ -593,6 +681,7 @@ const HelvetiaLayout = props => {
                     Equipe
                 </Title>
             </Hero>
+            <Waypoint onEnter={setNavbarTransparent} />
 
             <Box ref={equipeRef}>
                 <Hero sx={{ bg: "background" }}>
@@ -675,6 +764,7 @@ const HelvetiaLayout = props => {
                     </Flex>
                 </Hero>
             </Box>
+            <Waypoint onEnter={setNavbarOpaque} />
 
             {/* <Hero
                 bg="rgba(255, 255, 255, 0.5)"

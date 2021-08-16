@@ -246,7 +246,7 @@ class Navbar extends React.Component {
                             </Box>
                             <Box width={iconWidthBreakpoints} mx="auto">
                                 <RebassLink
-                                    href="https://www.instagram.com/helvetia2050/"
+                                    href="https://www.instagram.com/impro_impact/"
                                     target="_blank"
                                 >
                                     <Img

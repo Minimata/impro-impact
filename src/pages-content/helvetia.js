@@ -68,6 +68,11 @@ let content = {
             content:
                 "Filipe a commencé l’improvisation théâtrale il y a sept ans au sein de la Fédération d’Improvisation Genevoise (FIG). Il l’a enseignée ensuite très vite, aussi bien à des jeunes adultes à l’université qu’à des adolescents à la FIG. Aussi, il a contribué à de nombreux projets de festivals, comme le FIJI, le Fumigène, les Improfolies ou encore les Défis de la rentrée ; ainsi que participé à toute sorte de spectacles de formats longs, court et même de commedia dell’arte. En parallèle, Filipe est étudiant de master en lettres (littérature française moderne) à Genève, se spécialisant dans la dramaturgie et l’histoire du théâtre.",
         },
+        lisaMoussaoui: {
+            title: "Lisa Moussaoui",
+            content:
+                "Lisa Moussaoui est maître assistante et chargée de cours en psychologie appliquée à l'UNIGE et s'intéresse tout particulièrement à la psychologie des comportements environnementaux. Nous avons collaboré avec la Dre Moussaoui pour créer un questionnaire mesurant l'impact d'Helvetia2050. Les données du questionnaire, rempli avant et après le spectacle par le public, montrent des résultats encourageants qui seront publiés prochainement.",
+        },
     },
 }
 
