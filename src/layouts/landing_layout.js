@@ -41,7 +41,7 @@ const LandingLayout = props => {
         <iframe
             width="1280"
             height="720"
-            src="https://www.youtube-nocookie.com/embed/Rk0AiQmJAdM"
+            src="https://www.youtube-nocookie.com/embed/ssPLbUmOXdo"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
@@ -52,7 +52,7 @@ const LandingLayout = props => {
         <iframe
             width="300"
             height="169"
-            src="https://www.youtube-nocookie.com/embed/Rk0AiQmJAdM"
+            src="https://www.youtube-nocookie.com/embed/ssPLbUmOXdo"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
@@ -171,7 +171,7 @@ const LandingLayout = props => {
 
             <Waypoint onEnter={setNavbarOpaque} />
 
-            <InfoBanner></InfoBanner>
+            {/* <InfoBanner></InfoBanner> */}
 
             <Box ref={scrollRef}>
                 <Hero id="content">

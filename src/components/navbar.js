@@ -144,6 +144,22 @@ class Navbar extends React.Component {
                     onStateChange={state => this.handleStateChange(state)}
                 >
                     <Box>
+                        <Link to="/genre/" variant="nav">
+                            <Flex
+                                alignItems="center"
+                                justifyContent="spaceEvenly"
+                                fontSize={navbarTitleFontSizeBreakpoints}
+                            >
+                                <Box mx="auto"></Box>
+                                Genre
+                                <Box mx="auto"></Box>
+                            </Flex>
+                        </Link>
+                    </Box>
+                    {this.state.chaptersVisible === this.genreChaptersVisible
+                        ? this.renderChapters(this)
+                        : ""}
+                    <Box>
                         <Link
                             to="/trashquiz/"
                             variant="nav"
@@ -174,22 +190,6 @@ class Navbar extends React.Component {
                         </Link>
                     </Box>
                     {this.state.chaptersVisible === this.helvetiaChaptersVisible
-                        ? this.renderChapters(this)
-                        : ""}
-                    <Box>
-                        <Link to="/genre/" variant="nav">
-                            <Flex
-                                alignItems="center"
-                                justifyContent="spaceEvenly"
-                                fontSize={navbarTitleFontSizeBreakpoints}
-                            >
-                                <Box mx="auto"></Box>
-                                Genre
-                                <Box mx="auto"></Box>
-                            </Flex>
-                        </Link>
-                    </Box>
-                    {this.state.chaptersVisible === this.genreChaptersVisible
                         ? this.renderChapters(this)
                         : ""}
                     <Box>
